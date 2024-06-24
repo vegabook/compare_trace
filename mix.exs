@@ -14,9 +14,15 @@ defmodule CompareTrace.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      applications: applications(Mix.env)
     ]
   end
+
+
+  defp applications(:dev), do: applications(:all) ++ [:remix]
+  defp applications(_all), do: [:logger]
+
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
@@ -24,7 +30,8 @@ defmodule CompareTrace.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:csv, "~> 3.2"},
-      {:explorer, "~> 0.8.2"}
+      {:explorer, "~> 0.8.2"},
+      {:remix, "~> 0.0.1", only: :dev}
     ]
   end
 end

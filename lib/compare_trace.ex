@@ -9,10 +9,10 @@ defmodule CompareTrace do
   ## Examples
 
       iex> CompareTrace.hello()
-      :world
+      :world_again
 
   """
   def hello do
-    :world
+    :world_YO
   end
 end
