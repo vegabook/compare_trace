@@ -32,7 +32,7 @@ defmodule CompareTrace.MixProject do
       {:csv, "~> 3.2"},
       {:explorer, "~> 0.8.2"},
       {:remix, "~> 0.0.1", only: :dev},
-      {:timex, "~> 3.7"}
+      {:timex, "~> 3.7"},
     ]
   end
 end
